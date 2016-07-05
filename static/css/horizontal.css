@@ -1,0 +1,74 @@
+ /*
+1. document properties
+2. sections
+3. menu
+ */
+
+ html, body{
+        height: 100%;/*fallback*/
+        height: 100vh;
+        min-width: 180vw;
+        max-width: 600vw;
+        overflow-y: hidden;
+      }
+
+
+
+
+/* 2. sections */
+section{
+	height: 100vh;
+	float: left;
+}
+
+.w-50{
+	width:50vw;
+}
+.w-90{
+	width:90vw;
+}
+.w-100{
+	width: 100vw;
+}
+
+
+.homesection{
+	background-image: url('../images/section1.png');
+	background-size: cover;
+}
+
+
+/* 3. menu */
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar-transparent{
+	background-color: rgba(50,50,50,.5);
+	color: white;
+}
+
+.navbar-static-top {
+	width: 100vw;
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+	background: transparent;
+	cursor: pointer;
+	color: #a4c939;
+}
+
+.navbar-fixed-top .navbar-nav > li > a:active{
+	background: transparent;
+	color: #60731f;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+ .navbar-center{
+
+ }
