@@ -1,7 +1,8 @@
  /*
 1. document properties
 2. sections
-3. menu
+3. header and navigation
+4. content classes
  */
 
  html, body{
@@ -9,6 +10,7 @@
         height: 100vh;
         min-width: 180vw;
         max-width: 600vw;
+        font-family: 'Roboto Regular', arial;
         overflow-y: hidden;
       }
 
@@ -33,16 +35,38 @@ section{
 
 
 .homesection{
-	background-image: url('../images/section1.png');
+	background: rgba(10,10,10,0.4) url('../images/first-section.jpg');
+	background-blend-mode: multiply;
 	background-size: cover;
+	-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+
+/*не кроссбраузерно*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
 
 
+
 /* 3. menu */
+.navbar-brand{
+	background-image: url('../images/logo_svg.svg');
+	background-repeat: no-repeat;
+	width: 180px;
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	position: relative;
+	z-index: 10;
+}
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
+  text-transform: uppercase;
 }
 
 .navbar-transparent{
@@ -53,6 +77,13 @@ section{
 .navbar-static-top {
 	width: 100vw;
 }
+.navbar-fixed-top .navbar-nav > li > a{
+	transition: .2s;
+}
+.navbar-fixed-top .navbar-nav > li > a:focus{
+	color: forestgreen;
+}
+
 
 .navbar-fixed-top .navbar-nav > li > a:hover{
 	background: transparent;
@@ -71,4 +102,26 @@ section{
 
  .navbar-center{
 
+ }
+
+
+ /* 4. content classes  */
+ .bold{
+ 	font-weight: 600;
+ }
+
+ .center-content {
+ 	max-width: 400px;
+ 	max-height: 400px;
+
+ }
+ .color-white{
+ 	color: white;
+ }
+
+ #home-article{
+ 	text-align: center;
+ }
+ #home-article h1{
+ 	font-weight: 100;
  }
