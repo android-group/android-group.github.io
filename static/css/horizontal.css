@@ -3,6 +3,7 @@
 2. sections
 3. header and navigation
 4. content classes
+5. typografy
  */
 
  html, body{
@@ -10,7 +11,7 @@
         height: 100vh;
         min-width: 180vw;
         max-width: 600vw;
-        font-family: 'Roboto Regular', arial;
+        font-family: 'Roboto', arial;
         overflow-y: hidden;
       }
 
@@ -125,3 +126,22 @@ section{
  #home-article h1{
  	font-weight: 100;
  }
+
+ /* 5. typografy */
+
+ @font-face {
+  font-family: Roboto-thin;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+.thin-text{
+	font-family: Roboto-thin, sans-serif;
+	font-weight: 100;
+}

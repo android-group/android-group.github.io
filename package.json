@@ -1,0 +1,32 @@
+{
+  "name": "android-group",
+  "version": "0.2.1",
+  "description": "Версия со сборщиком",
+  "main": "index.html",
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+     "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/android-group/android-group.github.io.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Arnack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/android-group/android-group.github.io/issues"
+  },
+  "homepage": "https://github.com/android-group/android-group.github.io#readme"
+}
