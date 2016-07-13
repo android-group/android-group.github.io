@@ -80,6 +80,7 @@ section{
 }
 .navbar-fixed-top .navbar-nav > li > a{
 	transition: .2s;
+	padding-right: 25px;
 }
 .navbar-fixed-top .navbar-nav > li > a:focus{
 	color: forestgreen;
@@ -127,6 +128,59 @@ section{
  	font-weight: 100;
  }
 
+.center-up-content{
+	max-width: 600px;
+	max-height: 400px;
+	margin: 0 auto;
+}
+
+.down-50{
+	margin-top: 50px;
+}
+
+.down-100{
+	margin-top: 100px;
+}
+
+.bottom-50{
+	margin-bottom: 50px;
+}
+
+#tree-components{
+	max-width:700px;
+	margin: 0 auto; 
+	display: flex;
+	justify-content: center;
+}
+
+.component{
+	width: 122px;
+	height: 122px;
+	border: 2px solid black;
+	margin: 10px;
+	float: left;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#second-component{
+	margin-top: 130px;
+}
+
+.rotate45{
+	transform: rotate(45deg);
+}
+
+.rotate-45{
+	transform: rotate(-45deg);
+}
+
+.component-text{
+	/*margin-left: -2px;
+	margin-top: 34px;*/
+}
  /* 5. typografy */
 
  @font-face {
@@ -144,4 +198,20 @@ section{
 .thin-text{
 	font-family: Roboto-thin, sans-serif;
 	font-weight: 100;
+}
+
+.center-text{
+	text-align: center;
+}
+
+.no-margin{
+	margin: 0px;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.txt-12{
+	font-size: 11px;
 }
