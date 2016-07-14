@@ -40,8 +40,6 @@ section{
 	background: rgba(10,10,10,0.4) url('../images/first-section.jpg');
 	background-blend-mode: multiply;
 	background-size: cover;
-	-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
-	clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
 
 /*не кроссбраузерно*/
 	display: flex;
@@ -50,6 +48,13 @@ section{
 
 }
 
+
+@media screen and (min-width: 1023px){
+	.homesection{
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+	}
+}
 
 
 /* 3. menu */
@@ -179,9 +184,35 @@ section{
 }
 
 .component-text{
-	/*margin-left: -2px;
-	margin-top: 34px;*/
 }
+
+
+#form-wrapper{
+	position: relative;
+	bottom: 180px;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+}
+
+@media screen and (min-width: 1023px){
+
+	#form-wrapper{
+		left:-200px;
+	}
+}
+
+.preform-text{
+	margin-top: -10px;
+	margin-left: 0px;
+	background: white;
+}
+
+
  /* 5. typografy */
 
  @font-face {
