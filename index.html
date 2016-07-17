@@ -47,21 +47,29 @@
 	</header>
 
 <!-- основная часть с секциями -->
+	<!-- ОБРЕЗАЕМ ДЛЯ firefox -->
 
-	<section id="home" class="w-100 homesection parallax" class="">
+<svg>
+        <clippath id="my-definition">
+            <polygon points="0 0, 1 0, 0.4 1, 0 1"></polygon>
+        </clippath>
+</svg>
+
+	<section id="home" class="w-100 homesection parallax"  clip-path="url(#my-definition)">
 		
 				<article id="home-article" class="center-content color-white">
 					<h1 class="thin-text">РАЗРАБОТКА МОБИЛЬНЫХ ПРИЛОЖЕНИЙ</h1>
-					<h3 class="bold">ПРЕДОСТАВЛЯЯ МИНИМУМ<br>ПОЛУЧАЕТЕ МАКСИМУМ</h3>
+					<h4 class="lh30">ПРЕДОСТАВЛЯЯ МИНИМУМ<br>ПОЛУЧАЕТЕ МАКСИМУМ</h4>
 					<a href="#contact">
 					<img src="static/images/arrow_svg-01.svg" height="40" width="40">
 					</a>
 				</article>
 			
-	</section>
+	</section> 
+
 
 <!--   секция вторая    -->
-	<section id="contact" class="w-50">
+	<section id="contact" class="w-50-res">
 		<article>
 			<div class="center-up-content down-100 bottom-50">
 				<h2 class="uppercase center-text">Мы основываемся<br>На трех компонентах<br>Успешного приложения</h2>
@@ -87,11 +95,17 @@
 					<p>на создание приложения<br>от <strong class="uppercase">android-studio</strong></p>
 				</div>
 
+
+
 				<form id="contact-form" class="rotate-45" action="">
 					<input type="text" name="name" class="form-input" placeholder="имя">
-					<input type="text" name="contact" class="form-input" placeholder="телефон или e-mail">
-					<input type="submin" name="submit-btn" class="btn black-btn" value="ОТПРАВИТЬ">
+					<input type="text" name="contact" class="form-input" placeholder="телефон или e-mail"><br>
+					<input type="submit" name="submit-btn" class="btn black-btn" value="ОТПРАВИТЬ">
 				</form>
+
+				<!-- блок для анимации -->
+				<div class="back-animation"> </div>
+				<div class="none-animation"> </div>
 			</div>
 		</article>
 		
@@ -105,8 +119,44 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="static/js/bootstrap.js"></script>
-	<script src="static/js/jquery.localScroll.min.js"></script>
-	<script src="static/js/jquery.scrollTo.min.js"></script>
+	<script src="static/js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="static/js/clip.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+    		$('html, body, *').mousewheel(function(e, delta) {
+        	// multiplying by 40 is the sensitivity, 
+        	// increase to scroll faster.
+        	this.scrollLeft -= (delta * 100);
+        	e.preventDefault();
+    		});
+    	
+    	$('.form-input').focus(function(){
+    		if ($(window).width() >= '1023'){
+    			$('#form-wrapper').css("background-color","#e5f1d5");
+    			$('.back-animation').css("display","none");
+    			$('.none-animation').css("display","block");
+    		} 
+    	});
+
+    	$('.form-input').blur(function(){
+    		if ($(window).width() >= '1023'){
+    			$('#form-wrapper').css("background-color","transparent");
+    			$('.back-animation').css("display","");
+    			$('.none-animation').css("display","none");
+    		}
+
+    	});
+
+	if ($(window).width() >= '1023'){
+		var points = [[0, 0], [100, 0], [40, 100], [0, 1000]];
+        $('#home').clipPath(points, {
+          isPercentage: true
+        });
+    }
+    });
+	</script>
+
+
 </body>
 </html>
 

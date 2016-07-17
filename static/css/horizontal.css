@@ -2,7 +2,7 @@
 1. document properties
 2. sections
 3. header and navigation
-4. content classes
+4. content
 5. typografy
 6. parallax
  */
@@ -10,10 +10,11 @@
  html, body{
         height: 100%;/*fallback*/
         height: 100vh;
-        min-width: 180vw;
+        min-width: 210vw;
         max-width: 600vw;
         font-family: 'Roboto', arial;
         overflow-y: hidden;
+        text-align: center;
       }
 
 
@@ -26,8 +27,33 @@ section{
 }
 
 .w-50{
-	width:50vw;
+	width:60vw;
 }
+
+.w-50-res{
+	width:60vw;
+}
+
+@media screen and (max-width: 1000px) {
+	.w-50-res{
+	width:80vw;
+}
+}
+
+
+@media screen and (max-width: 570px) {
+	.w-50-res{
+	width:100vw;
+}
+}
+
+
+@media screen and (max-width: 470px) {
+	.w-50-res{
+	width:110vw;
+}
+}
+
 .w-90{
 	width:90vw;
 }
@@ -51,8 +77,8 @@ section{
 
 @media screen and (min-width: 1023px){
 	.homesection{
-		-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
-		clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 0% 100%);
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
+		clip-path: url(#my-definition);
 	}
 }
 
@@ -130,9 +156,6 @@ section{
  #home-article{
  	text-align: center;
  }
- #home-article h1{
- 	font-weight: 100;
- }
 
 .center-up-content{
 	max-width: 600px;
@@ -162,7 +185,7 @@ section{
 .component{
 	width: 122px;
 	height: 122px;
-	border: 2px solid black;
+	border: 2px solid #3d3d3d;
 	margin: 10px;
 	float: left;
 
@@ -186,46 +209,157 @@ section{
 .component-text{
 }
 
+/*               форма             */
+
+
 
 #form-wrapper{
 	position: relative;
-	bottom: 180px;
-	display: none;
-	justify-content: center;
-	align-items: center;
+	display: table-cell;
 	text-align: center;
+	vertical-align: middle;
 	width: 300px;
 	height: 300px;
-	border: 2px solid black;
+	
 }
 
 @media screen and (min-width: 1023px){
 
 	#form-wrapper{
-		left:-200px;
+		left: -422px;
+		bottom: -100px;
+		border: 2px solid #3d3d3d;
 	}
+	/*  белая ыра в бордере формы  */
+	#form-wrapper::before {
+    	content: " ";
+    	position: absolute;
+    	top: -3px;
+    	left: 58px;
+    	background-color: white;
+    	width: 158px;
+    	height: 4px;
+	}
+
+	@keyframes spinNscale {
+	   0% {    transform: rotate(0deg) scale(1);}
+	   100%{   transform: rotateZ(180deg) scale(10);}
+	}
+	#form-wrapper:hover .back-animation{
+	  animation: spinNscale 1s linear;
+	  animation-iteration-count: 1;
+	  animation-fill-mode: forwards;
+	  background: rgba(141,198,63, 0.5);
+	  opacity: 1;
+	}
+
 }
 
 .preform-text{
-	margin-top: -10px;
-	margin-left: 0px;
-	background: white;
+	position: relative;
+    left: -50px;
 }
 
 
+
+/* анимация при наведении на форму */
+.back-animation{
+  opacity: 0;
+  width:10%;
+  height: 10%;
+  background-color: rgba(141,198,63, 0.6);
+  position:relative;
+  left:45%;
+  top:-43%;
+  margin:0px;
+    z-index:-1;
+}
+.none-animation{
+	width:10%;
+  height: 10%;
+  display: none;
+}
+
+
+
+#form-wrapper:hover .form-input::-moz-placeholder{
+	color: white;
+}
+
+#form-wrapper:hover .form-input::-webkit-input-placeholder{
+	color: white;
+}
+#form-wrapper:hover .form-input::placeholder{
+	color: white;
+}
+
+#form-wrapper:hover .form-input:focus::-moz-placeholder{
+	color: black;
+}
+
+#form-wrapper:hover .form-input:focus::-webkit-input-placeholder{
+	color: black;
+}
+#form-wrapper:hover .form-input:focus::placeholder{
+	color: black;
+}
+
+
+/* сами инпуты */
+#contact-form{
+  position: relative;
+    top: -20px;
+    left: 21px;
+}
+
+.form-input{
+	background: transparent;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 2px solid #3d3d3d;
+	margin-top:5px;
+}
+/* убираем рамку инпута при фокусе */
+input[type="text"]:focus { outline: none; }
+/* для submit-кнопки */
+.black-btn {
+    color: white;
+    background-color: #3d3d3d;
+    margin-top: 10px;
+    border-radius: 0px;
+    padding: 8px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 11px;
+}
+
+
+.black-btn:hover {
+    color: white;
+    background-color: #3a3737;
+}
  /* 5. typografy */
 
  @font-face {
   font-family: Roboto-thin;
-  src: url(../fonts/Roboto-Thin.ttf);
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
 }
 
 
 @font-face {
   font-family: Roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
 }
 
+ #home-article h1{
+ 	font-weight: 100;
+    font-size: 36pt;
+ }
+
+ .lh30{
+ 	line-height: 30px;
+ }
 
 .thin-text{
 	font-family: Roboto-thin, sans-serif;
