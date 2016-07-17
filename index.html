@@ -129,7 +129,7 @@
         	this.scrollLeft -= (delta * 100);
         	e.preventDefault();
     		});
-    	
+    	//animation for the form
     	$('.form-input').focus(function(){
     		if ($(window).width() >= '1023'){
     			$('#form-wrapper').css("background-color","#e5f1d5");
@@ -147,6 +147,7 @@
 
     	});
 
+    //clip-path
 	if ($(window).width() >= '1023'){
 		var points = [[0, 0], [100, 0], [40, 100], [0, 1000]];
         $('#home').clipPath(points, {

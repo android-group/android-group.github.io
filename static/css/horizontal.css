@@ -235,9 +235,9 @@ section{
     	content: " ";
     	position: absolute;
     	top: -3px;
-    	left: 58px;
+    	left: 70px;
     	background-color: white;
-    	width: 158px;
+    	width: 160px;
     	height: 4px;
 	}
 
@@ -279,9 +279,6 @@ section{
   height: 10%;
   display: none;
 }
-
-
-
 #form-wrapper:hover .form-input::-moz-placeholder{
 	color: white;
 }
