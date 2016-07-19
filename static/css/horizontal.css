@@ -274,6 +274,13 @@ section{
   margin:0px;
     z-index:-1;
 }
+
+@-moz-document url-prefix(){
+	.back-animation{
+  		top:-32%;
+	}
+}
+
 .none-animation{
 	width:10%;
   height: 10%;
