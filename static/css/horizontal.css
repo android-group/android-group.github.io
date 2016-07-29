@@ -19,8 +19,15 @@
       }
 
 
+header{
+	height: 100vh;
+	width: 191px;
+}
 
-
+.navbar-bottom{
+	position: absolute;
+	bottom: 20px;
+}
 /* 2. sections */
 section{
 	height: 100vh;
@@ -111,9 +118,6 @@ section{
 	color: white;
 }
 
-.navbar-static-top {
-	width: 100vw;
-}
 .navbar-fixed-top .navbar-nav > li > a{
 	transition: .2s;
 	padding-right: 25px;
@@ -617,11 +621,13 @@ input[type="text"]:focus { outline: none; }
 .slider-content{
 	background-color: darkgray;
 	border-radius: 50%;
-	width: 100px;
-	height: 100px;
 }
 
 
+#team-slider{
+	margin-top: 300px;
+	max-width: 800px;
+}
  /* 5. typografy */
 
  @font-face {
