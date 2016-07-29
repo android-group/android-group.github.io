@@ -10,6 +10,7 @@
 	<title>Android Studio</title>
 	<link rel="stylesheet" href="static/css/bootstrap.css">
 	<link rel="stylesheet" href="static/css/horizontal.css">
+	<link rel="stylesheet" href="static/slick/slick.css"/>
 </head>
 <body>
 	<header class="navbar navbar-transparent navbar-static-top navbar-fixed-top bs-docs-nav" id="top" role="banner">
@@ -216,8 +217,29 @@
 
 
 	<!-- Наша команда -->
-	<section id="ourteam" class="">
+	<section id="ourteam" class="scew45-only w-100">
 		<h1 id="team-header" class="uppercase">наша команда</h1>
+
+		<article class="f-content">
+			<!-- контейнер для слайдера -->
+			<div id="team-slider">
+	
+			<!-- слайдер -->
+				<div class="slider-class">
+				  <div class="slider-content">
+					
+				  </div>
+	
+				  <div class="slider-content">
+	
+				  </div>
+	
+				  <div class="slider-content">
+	
+				  </div>
+				</div>
+			</div>
+		</article>
 		
 	</section>
 
@@ -232,7 +254,7 @@
 	<script src="static/js/bootstrap.js"></script>
 	<script src="static/js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="static/js/clip.js"></script>
-	<script type="text/javascript" src="static/js/parallax.min.js"></script>
+	<script type="text/javascript" src="static/slick/slick.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
     		$('html, body, *').mousewheel(function(e, delta) {
@@ -273,6 +295,34 @@
     }
 
     //horizontal parallax
+
+
+    //slider
+    $('.slider-class').slick({
+ 	  centerMode: true,
+	  centerPadding: '60px',
+	  slidesToShow: 3,
+	  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
 
     });
 	</script>

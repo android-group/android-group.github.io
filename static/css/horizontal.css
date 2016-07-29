@@ -563,7 +563,7 @@ input[type="text"]:focus { outline: none; }
 
 .price-medium:after{
 	position: relative;
-	bottom: -398px;
+	bottom: -108px;
 	/*margin-left: -190px;*/
 	font-size: 21px;
 	content: 'Благодаря нашей гибкой системе вы можете подобрать оптимальный тариф для вашего бизнеса';
@@ -608,6 +608,17 @@ input[type="text"]:focus { outline: none; }
 	transform: rotate(-45deg);
 	font-size: 14px;
 	margin-top: 6px;
+}
+
+
+
+/* секция 6 с нашей командой */
+
+.slider-content{
+	background-color: darkgray;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
 }
 
 
