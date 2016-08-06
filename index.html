@@ -182,7 +182,7 @@
 						</ul>
 
 						<a href="">
-							<div class="price-button rotate45">
+							<div id="butt2" class="price-button rotate45">
 								<p class="rotate-45 bold uppercase">
 									заказать
 								</p>
@@ -200,7 +200,7 @@
 						</ul>
 
 						<a href="">
-							<div class="price-button rotate45">
+							<div id="" class="price-button rotate45">
 								<p class="rotate-45 bold uppercase">
 									заказать
 								</p>
@@ -218,51 +218,80 @@
 
 	<!-- Наша команда -->
 	<section id="ourteam" class="scew45-only w-100">
-		<h1 id="team-header" class="uppercase">наша команда</h1>
-
+		
 		<article class="f-content">
+		<h1 id="team-header" class="uppercase">наша команда</h1>
 			<!-- контейнер для слайдера -->
 			<div id="team-slider">
 	
 			<!-- слайдер -->
 				    <div class="slider-class">
 				  		<div>
-				  			<div style="background-color: lightsteelblue; border-radius: 50%;">
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
 								iogigbo<br>ibibpiob<br> dausfoi
 							</div>
 				    	</div>
 	
 				  		<div>
-				  			<div style="background-color: lightsteelblue; border-radius: 50%;">
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
 								iogigbo<br>ibibpiob<br> dausfoi
 							</div>
 				    	</div>
 	
 				 		<div>
-				  			<div style="background-color: lightsteelblue; border-radius: 50%;">
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
 								iogigbo<br>ibibpiob<br> dausfoi
 							</div>
 				    	</div>
 
 				    	<div>
-				  			<div style="background-color: lightsteelblue; border-radius: 50%;">
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
 								iogigbo<br>ibibpiob<br> dausfoi
 							</div>
 				    	</div>
 
 				    	<div>
-				  			<div style="background-color: lightsteelblue; border-radius: 50%;">
+				  			<div  class="slide-content-x" style="background-color: darkblue; color: white;  border-radius: 50%;">
 								iogigbo<br>ibibpiob<br> dausfoi
 							</div>
 				    	</div>
 				  
 					</div>
 				</div>
+
+				<div class="bottom-buttons">
+					<button class="btn big-black-button">ДИЗАЙНЕРЫ</button>
+					<button class="btn big-black-button">РАЗРАБОТЧИКИ</button>
+					<button class="btn big-black-button">ПРОДВИГАЛЬЩИКИ</button>
+				</div>
 		</article>
 		
 	</section>
 
 
+
+
+	<section id="last-section">
+		<article class="a-contacts">
+			<div class="col-xs-6">
+				<ul class="last-menu"> 
+			 			<li class=""><a href="#home">Главная</a></li>
+               			<li><a href="#folio">Портфолио</a></li>
+                		<li><a href="#contact">Цены</a></li>
+                		<li><a href="#contact">Наша команда</a></li>
+                		<li><a href="#contact">Контакты</a></li>
+			 		</ul>
+			</div>
+			<div class="col-xs-6">
+				<a href="" class="navbar-brand"> </a>
+				<div class="last-cont">
+			 	 	<h4 class="no-margin">8(800)111-22-33</h4>
+			 	 	<span>пн-пт: с 10-00 до 19-00</span><br>
+			 	 	<span class="uppercase">info@android-studio.ru</span>
+			 	 </div>
+			</div>
+		</article>
+	</section>
 
 
 	<footer>
@@ -273,7 +302,7 @@
 	<script src="static/js/bootstrap.js"></script>
 	<script src="static/js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="static/js/clip.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 	<script type="text/javascript" src="static/slick/slick.min.js"></script>
 	<script type="text/javascript">
@@ -309,11 +338,18 @@
 
     //clip-path
 	if ($(window).width() >= '1023'){
-		var points = [[0, 0], [100, 0], [coef, 100], [0, 1000]];
+		var points = [[0, 0], [100, 0], [coef, 100], [0, 100]];
         $('#home').clipPath(points, {
           isPercentage: true
         });
     }
+
+    var coef2 = Math.round(((width - height) / width)*80);
+	var points2 = [[100, coef2], [0, 100], [100, 100]];
+        $('#last-section').clipPath(points2, {
+          isPercentage: true
+        });
+
 
     //horizontal parallax
 
@@ -321,13 +357,14 @@
     //slider
     $('.slider-class').slick({
  	  centerMode: true,
-	  centerPadding: '60px',
+	  centerPadding: '90px',
+	  arrows: false,
 	  slidesToShow: 3,
 	  responsive: [
     {
       breakpoint: 768,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '40px',
         slidesToShow: 3

@@ -85,6 +85,11 @@ section{
 
 }
 
+#ourteam{
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+}
 
 @media screen and (min-width: 1023px){
 	.homesection{
@@ -625,7 +630,7 @@ input[type="text"]:focus { outline: none; }
 
 
 #team-slider{
-	margin-top: 300px;
+	margin-top: 100px;
 	max-width: 800px;
 }
  /* 5. typografy */
@@ -671,26 +676,103 @@ input[type="text"]:focus { outline: none; }
 	font-size: 11px;
 }
 
+.team-header{
 
-/* 6. parallax */
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-y: hidden;
-  overflow-x: auto;
 }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
+/* слайдер */
+.slide-content-x{
+	width: 240px;
+	height: 240px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.parallax__layer--base {
-  transform: translateZ(0);
+
+.slick-center .slide-content-x{
+	width: 300px;
+	height: 300px;
+	margin-top: -35px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
+
+.slick-slide {
+    display: block;
+    margin: 50px;
+}
+
+
+/* кнопки снизу */
+.bottom-buttons{
+	position: relative;
+	bottom: 30px;
+
+}
+
+.big-black-button{
+	background: #333333;
+	color:white;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 22px;
+	padding-right: 22px;
+	margin-right: 50px;
+	border-radius: 0px;
+}
+
+.big-black-button:hover{
+	background: #111111;
+	color:white;
+}
+
+
+
+/* последняя секция */
+#last-section{
+	background: #888888;
+	width: 50vw;
+	 display: flex;
+    justify-content: center;
+    /* align-content: flex-end; */
+    align-items: flex-end;
+}
+
+
+.a-contacts{
+	position: relative;
+	bottom: 10px;
+}
+
+.last-menu{
+	color:white;
+}
+
+.last-menu{
+	list-style: none;
+	text-transform: uppercase;
+	line-height: 2;
+	text-align: left;
+}
+
+.last-menu li:hover a{
+	color: white;
+}
+
+
+.last-cont{
+	color: white;
+}
+
+/* то, что ниже, нужно переписать */
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+	.price-medium .price-button {
+    	left: 206% !important;
+   		bottom: -27px;
+	}
 }
