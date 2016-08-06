@@ -10,7 +10,7 @@
  html, body{
         height: 100%;/*fallback*/
         height: 100vh;
-        min-width: 640vw;
+        min-width: 515vw;
         max-width: 2600vw;
         font-family: 'Roboto', arial;
         overflow-y: hidden;
@@ -766,6 +766,12 @@ input[type="text"]:focus { outline: none; }
 
 .last-cont{
 	color: white;
+}
+
+@media (min-width: 1023px){
+	#last-section{
+		margin-left: -500px;
+	}
 }
 
 /* то, что ниже, нужно переписать */
