@@ -710,7 +710,7 @@ input[type="text"]:focus { outline: none; }
 /* кнопки снизу */
 .bottom-buttons{
 	position: relative;
-	bottom: 30px;
+	bottom: 20px;
 
 }
 
@@ -742,6 +742,11 @@ input[type="text"]:focus { outline: none; }
     align-items: flex-end;
 }
 
+@media (min-width: 1023px){
+	#last-section{
+		margin-left: -500px;
+	}
+}
 
 .a-contacts{
 	position: relative;
@@ -768,11 +773,6 @@ input[type="text"]:focus { outline: none; }
 	color: white;
 }
 
-@media (min-width: 1023px){
-	#last-section{
-		margin-left: -500px;
-	}
-}
 
 /* то, что ниже, нужно переписать */
 
