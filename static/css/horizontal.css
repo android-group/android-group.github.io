@@ -782,3 +782,10 @@ input[type="text"]:focus { outline: none; }
    		bottom: -27px;
 	}
 }
+
+@media (max-width: 900){
+	#last-section{
+		display: none;
+	}
+}
+
