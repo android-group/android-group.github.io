@@ -10,6 +10,7 @@
 	<title>Android Studio</title>
 	<link rel="stylesheet" href="static/css/bootstrap.css">
 	<link rel="stylesheet" href="static/css/horizontal.css">
+	<link rel="stylesheet" href="static/slick/slick.css"/>
 </head>
 <body>
 	<header class="navbar navbar-transparent navbar-static-top navbar-fixed-top bs-docs-nav" id="top" role="banner">
@@ -26,17 +27,17 @@
 			 	</button> 
 			 		
 			 </div> 
-			 	<nav id="bs-navbar" class="collapse navbar-collapse navbar-fixed-top"> 
+			 	<nav id="bs-navbar" class="collapse navbar-collapse navbar-fixed-left"> 
 			 		<ul class="nav navbar-nav"> 
 			 			<li class="active"><a href="#home">Главная</a></li>
-               			<li><a href="#folio">Портфолио</a></li>
-                		<li><a href="#contact">Цены</a></li>
-                		<li><a href="#contact">Наша команда</a></li>
-                		<li><a href="#contact">Контакты</a></li>
+               			<li><a href="#project-slider">Портфолио</a></li>
+                		<li><a href="#price-section">Цены</a></li>
+                		<li><a href="#ourteam">Наша команда</a></li>
+                		<li><a href="#last-section">Контакты</a></li>
 			 		</ul> 
 			 	</nav> 
 
-			 	 <div class="navbar-right">
+			 	 <div class="navbar-bottom">
 			 	 	<h3 class="no-margin">8 (800) 111-22-33</h3>
 			 	 	<span>пн-пт: с 10-00 до 19-00</span><br>
 			 	 	<span class="uppercase">info@android-studio.ru</span>
@@ -55,7 +56,7 @@
         </clippath>
 </svg>
 
-	<section id="home" class="w-100 homesection parallax"  clip-path="url(#my-definition)">
+	<section id="home" class="w-100 homesection">
 		
 				<article id="home-article" class="center-content color-white">
 					<h1 class="thin-text">РАЗРАБОТКА МОБИЛЬНЫХ ПРИЛОЖЕНИЙ</h1>
@@ -70,7 +71,7 @@
 
 <!--   секция вторая    -->
 	<section id="contact" class="w-50-res">
-		<article>
+		<article class="left-res-450">
 			<div class="center-up-content down-100 bottom-50">
 				<h2 class="uppercase center-text">Мы основываемся<br>На трех компонентах<br>Успешного приложения</h2>
 			</div>
@@ -89,6 +90,7 @@
 				</div>	
 			</div>
 
+			<!-- форма -->
 			<div id="form-wrapper" class="rotate45">
 				<div class="rotate-45 preform-text">
 					<h4 class="uppercase">Оставьте заявку</h4>
@@ -107,10 +109,189 @@
 				<div class="back-animation"> </div>
 				<div class="none-animation"> </div>
 			</div>
+
+		</article>
+
+		
+	</section>
+
+	<section id="project-slider" class="scew45">
+		<!-- слайдер -->
+			<ul>
+				<li class="project project01">
+					<div class="project-content"></div>
+				</li>
+				<li class="project project02">
+					<div class="project-content"></div>
+				</li>
+				<li class="project project03">
+					<div class="project-content"></div>
+				</li>
+				<li class="project project04">
+					<div class="project-content"></div>
+				</li>
+				<li class="project project05">
+					<div class="project-content"></div>
+				</li>
+			</ul>
+	</section>
+
+<!-- секция четвёртая -->
+
+	<section id="section4" class="scew45-only">
+		<article class="third-content">
+			<h2 class="uppercase lh30">
+				Наша цель - совместить потребности <br> пользователей и задачи бизнеса
+			</h2>
+			<p>
+				ANDROID STUDIO поможет ваiему бизнесу выйти на новый уровень. Мы создаём качественные приложения опираясь на современные тенденции в области разработки. Досконально исследем рынок и предлагаем своим клиентам только проверенные решения. Зазрабатыая приложения мы следим за всеми необходимыми этапами, благодаря которым вы получаете профессиональный продукт.
+			</p>
+		</article>
+	</section>
+
+
+		<section id="price-section" class="scew45-only">
+		<article class="f-content">
+
+				<div id="price">
+					<div class="price price-light">
+						<h3 class="price-header uppercase">light</h3>
+						<p class="price-desc">тариф будет полезен бизнесу, который только запускается</p>
+						<h3 class="price-price">50 000 руб</h3>
+						<ul class="price-list">
+							<li>идея</li>
+							<li>дизайн</li>
+						</ul>
+
+						<a href="">
+							<div class="price-button rotate45">
+								<p class="rotate-45 bold uppercase">
+									заказать
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="price price-medium">
+						<h3 class="price-header uppercase">medium</h3>
+						<p class="price-desc">тариф будет полезен малому так и среднему бизнесу</p>
+						<h3 class="price-price">80 000 руб</h3>
+						<ul class="price-list">
+							<li>LIGHT +</li>
+							<li>Поддержка</li>
+						</ul>
+
+						<a href="">
+							<div id="butt2" class="price-button rotate45">
+								<p class="rotate-45 bold uppercase">
+									заказать
+								</p>
+							</div>
+						</a>
+					</div>
+
+					<div class="price price-hard">
+						<h3 class="price-header uppercase">hard</h3>
+						<p class="price-desc">тариф будет полезен укрепившемуся бизнесу</p>
+						<h3 class="price-price">120 000 руб</h3>
+						<ul class="price-list">
+							<li>LIGHT +</li>
+							<li>Поддержка</li>
+						</ul>
+
+						<a href="">
+							<div id="" class="price-button rotate45">
+								<p class="rotate-45 bold uppercase">
+									заказать
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!--<h3 class="uppercase lh30">
+					Благодаря нашей гибкой системе<br>вы можете подобрать оптимальный<br>тариф для вашего бизнеса
+				</h3>-->
+			</article>
+	</section>
+
+
+	<!-- Наша команда -->
+	<section id="ourteam" class="scew45-only w-100">
+		
+		<article class="f-content">
+		<h1 id="team-header" class="uppercase">наша команда</h1>
+			<!-- контейнер для слайдера -->
+			<div id="team-slider">
+	
+			<!-- слайдер -->
+				    <div class="slider-class">
+				  		<div>
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
+								iogigbo<br>ibibpiob<br> dausfoi
+							</div>
+				    	</div>
+	
+				  		<div>
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
+								iogigbo<br>ibibpiob<br> dausfoi
+							</div>
+				    	</div>
+	
+				 		<div>
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
+								iogigbo<br>ibibpiob<br> dausfoi
+							</div>
+				    	</div>
+
+				    	<div>
+				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
+								iogigbo<br>ibibpiob<br> dausfoi
+							</div>
+				    	</div>
+
+				    	<div>
+				  			<div  class="slide-content-x" style="background-color: darkblue; color: white;  border-radius: 50%;">
+								iogigbo<br>ibibpiob<br> dausfoi
+							</div>
+				    	</div>
+				  
+					</div>
+				</div>
+
+				<div class="bottom-buttons">
+					<button class="btn big-black-button">ДИЗАЙНЕРЫ</button>
+					<button class="btn big-black-button">РАЗРАБОТЧИКИ</button>
+					<button class="btn big-black-button">ПРОДВИГАЛЬЩИКИ</button>
+				</div>
 		</article>
 		
 	</section>
 
+
+
+
+	<section id="last-section">
+		<article class="a-contacts">
+			<div class="col-xs-6">
+				<ul class="last-menu"> 
+			 			<li class=""><a href="#home">Главная</a></li>
+               			<li><a href="#project-slider">Портфолио</a></li>
+                		<li><a href="#price-section">Цены</a></li>
+                		<li><a href="#ourteam">Наша команда</a></li>
+                		<li><a href="#last-section">Контакты</a></li>
+			 		</ul>
+			</div>
+			<div class="col-xs-6">
+				<a href="" class="navbar-brand"> </a>
+				<div class="last-cont">
+			 	 	<h4 class="no-margin">8(800)111-22-33</h4>
+			 	 	<span>пн-пт: с 10-00 до 19-00</span><br>
+			 	 	<span class="uppercase">info@android-studio.ru</span>
+			 	 </div>
+			</div>
+		</article>
+	</section>
 
 
 	<footer>
@@ -121,6 +302,9 @@
 	<script src="static/js/bootstrap.js"></script>
 	<script src="static/js/jquery.mousewheel.min.js"></script>
 	<script type="text/javascript" src="static/js/clip.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script type="text/javascript" src="static/slick/slick.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
     		$('html, body, *').mousewheel(function(e, delta) {
@@ -147,13 +331,57 @@
 
     	});
 
+    	var width = $(window).width();
+    	var height = $(window).height();
+    	var coef = Math.round(((width - height) / width)*100); //отношение ширины и высоты окна, нужно для создания скоса в 45гр.
+    	console.log(coef);
+
     //clip-path
 	if ($(window).width() >= '1023'){
-		var points = [[0, 0], [100, 0], [40, 100], [0, 1000]];
+		var points = [[0, 0], [100, 0], [coef, 100], [0, 100]];
         $('#home').clipPath(points, {
           isPercentage: true
         });
     }
+
+    var coef2 = Math.round(((width - height) / width)*80);
+	var points2 = [[100, coef2], [0, 100], [100, 100]];
+        $('#last-section').clipPath(points2, {
+          isPercentage: true
+        });
+
+
+    //horizontal parallax
+
+
+    //slider
+    $('.slider-class').slick({
+ 	  centerMode: true,
+	  centerPadding: '90px',
+	  arrows: false,
+	  slidesToShow: 3,
+	  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
     });
 	</script>
 

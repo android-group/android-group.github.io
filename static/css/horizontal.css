@@ -10,16 +10,24 @@
  html, body{
         height: 100%;/*fallback*/
         height: 100vh;
-        min-width: 210vw;
-        max-width: 600vw;
+        min-width: 515vw;
+        max-width: 2600vw;
         font-family: 'Roboto', arial;
         overflow-y: hidden;
+        overflow-x: scroll;
         text-align: center;
       }
 
 
+header{
+	height: 100vh;
+	width: 191px;
+}
 
-
+.navbar-bottom{
+	position: absolute;
+	bottom: 20px;
+}
 /* 2. sections */
 section{
 	height: 100vh;
@@ -27,16 +35,16 @@ section{
 }
 
 .w-50{
-	width:60vw;
+	width:50vw;
 }
 
 .w-50-res{
-	width:60vw;
+	width:50vw;
 }
 
 @media screen and (max-width: 1000px) {
 	.w-50-res{
-	width:80vw;
+	width:50vw;
 }
 }
 
@@ -66,14 +74,22 @@ section{
 	background: rgba(10,10,10,0.4) url('../images/first-section.jpg');
 	background-blend-mode: multiply;
 	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
 
 /*не кроссбраузерно*/
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/*align-items: center;*/
+	padding-top: 200px;
 
 }
 
+#ourteam{
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+}
 
 @media screen and (min-width: 1023px){
 	.homesection{
@@ -103,13 +119,10 @@ section{
 }
 
 .navbar-transparent{
-	background-color: rgba(50,50,50,.5);
+	background-color: rgba(50,50,50,.7);
 	color: white;
 }
 
-.navbar-static-top {
-	width: 100vw;
-}
 .navbar-fixed-top .navbar-nav > li > a{
 	transition: .2s;
 	padding-right: 25px;
@@ -175,6 +188,9 @@ section{
 	margin-bottom: 50px;
 }
 
+/*   Вторая секция    */
+
+
 #tree-components{
 	max-width:700px;
 	margin: 0 auto; 
@@ -192,6 +208,32 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: .3s;
+}
+
+.component:before {
+    content:'';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-position: 15% 85%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.component:hover {
+    border-color: #a5ca39;
+    background-color: #a5ca39;
+    color:white;
+    font-weight: bold;
+}
+.component:hover:before {
+    background-color: #a5ca39;
+    border-color: #a5ca39;
 }
 
 #second-component{
@@ -209,6 +251,15 @@ section{
 .component-text{
 }
 
+
+/*  вторая секция, содержание  */
+@media screen and (min-width: 1023px){
+	.left-res-450{
+		margin-left: -450px;
+	}
+}
+
+
 /*               форма             */
 
 
@@ -222,15 +273,20 @@ section{
 	height: 300px;
 	
 }
+@media (min-width: 900px) and (max-width: 1423px){
+	#form-wrapper{
+		position: relative;
+		bottom: 120px;
+	}
+}
 
 @media screen and (min-width: 1023px){
-
 	#form-wrapper{
-		left: -422px;
-		bottom: -100px;
+		position: relative;
+		left: 0px;
 		border: 2px solid #3d3d3d;
 	}
-	/*  белая ыра в бордере формы  */
+	/*  белая дыра в бордере формы  */
 	#form-wrapper::before {
     	content: " ";
     	position: absolute;
@@ -343,6 +399,240 @@ input[type="text"]:focus { outline: none; }
     color: white;
     background-color: #3a3737;
 }
+
+/* слайдер проектов */
+#project-slider{
+	background: rgba(30,30,30,0.4);
+	width: 360px;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+#project-slider::before{
+	position: absolute;
+	z-index: 2;
+	top: 40px;
+	content: "  ";
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/arrowup.svg);
+	cursor: pointer;
+
+	-webkit-transform: skewX(45deg);
+	-o-transform: skewX(45deg);
+	-moz-transform: skewX(45deg);
+	transform: skewX(45deg);
+}
+
+#project-slider::after{
+	position: absolute;
+	z-index: 2;
+	margin-top: -79px;
+	content: "  ";
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/arrowdown.svg);
+	cursor: pointer;
+
+	-webkit-transform: skewX(45deg);
+	-o-transform: skewX(45deg);
+	-moz-transform: skewX(45deg);
+	transform: skewX(45deg);
+}
+
+
+#project-slider ul{
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+
+@media screen and (min-width: 1023px){
+.scew45{
+	transform: skewX(-45deg);
+}
+.scew45-only{
+	transform: skewX(-45deg);
+}
+.scew45-only > *{
+	transform: skewX(45deg);
+}
+}
+
+
+.project{
+	height: 20vh;
+	width: 100%;
+	list-style: none;
+	cursor: pointer;
+
+
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	overflow: hidden;
+	transition: .8s;
+}
+.project-content{
+	background: rgba(20,20,20,.3) url('../images/first-section.jpg');
+	background-size: cover;
+	transform: skewX(45deg);
+	margin-left: -42%;
+	height: 100%;
+	width: 200%;
+}
+
+.project:hover{
+	-webkit-filter: none;
+	-moz-filter: none;
+	-o-filter: none;
+	filter: none;
+}
+
+
+/* четвёртая секция */
+#section4{
+	background: rgba(255,255,255,0.3) url('../images/thrd.png');
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -40px 0px;
+	width: 95vw;
+
+	display: flex;
+}
+
+.third-content{
+	max-width: 700px;
+    margin: 242px auto;
+}
+
+
+/* пятая секция */
+.f-content{
+	max-width: 1400px;
+    margin: 100px auto;
+    height: 100vh;
+}
+
+
+
+#price-section{
+	background-image: url('../images/section5.png');
+	background-color: rgba(250,250,250,0.3);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -40px 0px;
+	width: 95vw;
+	min-width: 1400px;
+	margin-left: -3vw;
+	
+}
+
+
+/* контейнер с ценами */
+#price{
+	width: 1220px;
+	margin: 0px auto;
+	/*margin-bottom: 40px;*/
+}
+
+
+/* ценник */
+.price{
+	background: url('../images/rombus.png');
+	background-size: cover;
+	width: 380px;
+	height: 380px;
+	float:left;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.price-list{
+	text-align: left;
+	margin: 0 auto;
+	max-width: 200px;
+}
+
+.price-desc{
+	max-width:200px;
+	margin: 0 auto;
+}
+
+.price-light{
+	position: relative;
+	top:100px;
+	left: 100px;
+}
+
+.price-medium:after{
+	position: relative;
+	bottom: -108px;
+	/*margin-left: -190px;*/
+	font-size: 21px;
+	content: 'Благодаря нашей гибкой системе вы можете подобрать оптимальный тариф для вашего бизнеса';
+	width: 415px;
+	text-transform: uppercase;
+}
+
+.price-hard{
+	position: relative;
+	top:100px;
+	right: 100px;
+	clear: right;
+}
+
+/* Кнопка заказа */
+.price-button{
+	width: 64px;
+	height: 79px;
+	position: relative;
+	background-color: #333333;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.price-light .price-button{
+	bottom: -27px;
+}
+
+.price-medium .price-button{
+	left: 187%;
+	bottom: -27px;
+}
+
+.price-hard .price-button{
+	
+	bottom: -27px;
+}
+
+
+.price-button p{
+	color: white;
+	transform: rotate(-45deg);
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+
+
+/* секция 6 с нашей командой */
+
+.slider-content{
+	background-color: darkgray;
+	border-radius: 50%;
+}
+
+
+#team-slider{
+	margin-top: 100px;
+	max-width: 800px;
+}
  /* 5. typografy */
 
  @font-face {
@@ -386,26 +676,116 @@ input[type="text"]:focus { outline: none; }
 	font-size: 11px;
 }
 
+.team-header{
 
-/* 6. parallax */
-
-.parallax {
-  perspective: 1px;
-  height: 100vh;
-  overflow-y: hidden;
-  overflow-x: auto;
 }
 
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+
+/* слайдер */
+.slide-content-x{
+	width: 240px;
+	height: 240px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.parallax__layer--base {
-  transform: translateZ(0);
+
+.slick-center .slide-content-x{
+	width: 300px;
+	height: 300px;
+	margin-top: -35px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.parallax__layer--back {
-  transform: translateZ(-1px) scale(2);
+
+.slick-slide {
+    display: block;
+    margin: 50px;
 }
+
+
+/* кнопки снизу */
+.bottom-buttons{
+	position: relative;
+	bottom: 20px;
+
+}
+
+.big-black-button{
+	background: #333333;
+	color:white;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 22px;
+	padding-right: 22px;
+	margin-right: 50px;
+	border-radius: 0px;
+}
+
+.big-black-button:hover{
+	background: #111111;
+	color:white;
+}
+
+
+
+/* последняя секция */
+#last-section{
+	background: #888888;
+	width: 50vw;
+	 display: flex;
+    justify-content: flex-end;
+    /* align-content: flex-end; */
+    align-items: flex-end;
+}
+
+@media (min-width: 1023px){
+	#last-section{
+		margin-left: -500px;
+	}
+}
+
+.a-contacts{
+	position: relative;
+	bottom: 10px;
+}
+
+.last-menu{
+	color:white;
+}
+
+.last-menu{
+	list-style: none;
+	text-transform: uppercase;
+	line-height: 2;
+	text-align: left;
+}
+
+.last-menu li:hover a{
+	color: white;
+}
+
+
+.last-cont{
+	color: white;
+}
+
+
+/* то, что ниже, нужно переписать */
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+	.price-medium .price-button {
+    	left: 206% !important;
+   		bottom: -27px;
+	}
+}
+
+@media (max-width: 900){
+	#last-section{
+		display: none;
+	}
+}
+
