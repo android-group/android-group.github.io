@@ -19,6 +19,19 @@
       }
 
 
+@media (min-width: 777px) and (max-width: 899px){
+	html, body{
+		min-width: 330vw;
+	}
+}
+
+@media (min-width: 900px) and (max-width: 1023px){
+	html, body{
+		min-width: 310vw;
+	}
+}
+
+
 @media (min-width: 1024px) and (max-width: 1280px){
 	html, body{
 		min-width: 284vw;
@@ -236,6 +249,13 @@ section{
 	text-decoration: underline;
 }
 
+
+@media (max-width: 1200px){
+.second-third{
+	display: none !important;
+}
+}
+
 .component{
 	width: 122px;
 	height: 122px;
@@ -275,7 +295,7 @@ section{
 }
 
 #second-component{
-	margin-top: 130px;
+	margin-top: -122px;
 }
 
 .rotate45{
