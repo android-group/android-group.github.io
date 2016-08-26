@@ -10,7 +10,7 @@
  html, body{
         height: 100%;/*fallback*/
         height: 100vh;
-        min-width: 515vw;
+        min-width: 281vw;
         max-width: 2600vw;
         font-family: 'Roboto', arial;
         overflow-y: hidden;
@@ -18,6 +18,29 @@
         text-align: center;
       }
 
+
+@media (min-width: 1024px) and (max-width: 1280px){
+	html, body{
+		min-width: 284vw;
+	}
+}
+
+@media (min-width: 1360px) and (max-width: 1439px){
+	html, body{
+		min-width: 250vw;
+	}
+}
+
+@media (min-width: 1440px) {
+	html, body{
+		min-width: 245vw;
+	}
+}
+
+
+a:hover{
+	color: white;
+}
 
 header{
 	height: 100vh;
@@ -198,6 +221,21 @@ section{
 	justify-content: center;
 }
 
+#tree-components ul{
+	list-style: none;
+}
+
+#tree-components ul li a{
+	list-style: none;
+	color: #333333;
+	font-size: 24px;
+}
+
+#tree-components ul li a:hover{
+	color: #333333;
+	text-decoration: underline;
+}
+
 .component{
 	width: 122px;
 	height: 122px;
@@ -255,7 +293,6 @@ section{
 /*  вторая секция, содержание  */
 @media screen and (min-width: 1023px){
 	.left-res-450{
-		margin-left: -450px;
 	}
 }
 
@@ -276,14 +313,15 @@ section{
 @media (min-width: 900px) and (max-width: 1423px){
 	#form-wrapper{
 		position: relative;
-		bottom: 120px;
+		top: 80px;
+		left: -30px;
 	}
 }
 
 @media screen and (min-width: 1023px){
 	#form-wrapper{
 		position: relative;
-		left: 0px;
+		left: -15vw;
 		border: 2px solid #3d3d3d;
 	}
 	/*  белая дыра в бордере формы  */
@@ -314,6 +352,7 @@ section{
 .preform-text{
 	position: relative;
     left: -50px;
+    top: 12px;
 }
 
 
@@ -343,14 +382,14 @@ section{
   display: none;
 }
 #form-wrapper:hover .form-input::-moz-placeholder{
-	color: white;
+	color: #333333;
 }
 
 #form-wrapper:hover .form-input::-webkit-input-placeholder{
-	color: white;
+	color: #333333;
 }
 #form-wrapper:hover .form-input::placeholder{
-	color: white;
+	color: #333333;
 }
 
 #form-wrapper:hover .form-input:focus::-moz-placeholder{

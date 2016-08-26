@@ -29,16 +29,15 @@
 			 </div> 
 			 	<nav id="bs-navbar" class="collapse navbar-collapse navbar-fixed-left"> 
 			 		<ul class="nav navbar-nav"> 
-			 			<li class="active"><a href="#home">Главная</a></li>
-               			<li><a href="#contact">Портфолио</a></li>
+			 			<li class="active"><a href="#home-article">Главная</a></li>
+			 			<li><a href="#contact">Контакты</a></li>
                 		<li><a href="#price-section">Цены</a></li>
-                		<li><a href="#ourteam">Наша команда</a></li>
-                		<li><a href="#last-section">Контакты</a></li>
+                		
 			 		</ul> 
 			 	</nav> 
 
 			 	 <div class="navbar-bottom">
-			 	 	<h3 class="no-margin">8 (800) 111-22-33</h3>
+			 	 	<h4 class="no-margin"><a href="tel:+79853199609">+7 985 31-99-609</h4>
 			 	 	<span>пн-пт: с 10-00 до 19-00</span><br>
 			 	 	<span class="uppercase">info@android-studio.ru</span>
 			 	 </div>
@@ -50,13 +49,8 @@
 <!-- основная часть с секциями -->
 	<!-- ОБРЕЗАЕМ ДЛЯ firefox -->
 
-<svg>
-        <clippath id="my-definition">
-            <polygon points="0 0, 1 0, 0.4 1, 0 1"></polygon>
-        </clippath>
-</svg>
 
-	<section id="home" class="w-100 homesection">
+	<section id="home" name="home" class="w-100 homesection">
 		
 				<article id="home-article" class="center-content color-white">
 					<h1 class="thin-text">РАЗРАБОТКА МОБИЛЬНЫХ ПРИЛОЖЕНИЙ</h1>
@@ -72,22 +66,21 @@
 <!--   секция вторая    -->
 	<section id="contact" class="w-50-res">
 		<article class="left-res-450">
-			<div class="center-up-content down-100 bottom-50">
-				<h2 class="uppercase center-text">Мы основываемся<br>На трех компонентах<br>Успешного приложения</h2>
+			<div class="center-up-content bottom-50">
+				<h2 class="uppercase center-text">Как с нами связаться</h2>
 			</div>
 			<!-- три компонента -->
 			<div id="tree-components" class="">
-				<div id="first-component" class="rotate45 component">
-					<p class="rotate-45 uppercase txt-12 center-text component-text">развитие идеи<br>до конкретного<br>результата</p>
-				</div>	
-
-				<div id="second-component" class="rotate45 component">
-					<p class="rotate-45 uppercase txt-12 center-text component-text">Продукт,<br>прошедший все<br>тестирования</p>
-				</div>	
-
-				<div id="third-component" class="rotate45 component">
-					<p class="rotate-45 uppercase txt-12 center-text component-text">поддержка<br>продукта после<br>запуска</p>
-				</div>	
+				<p class="">
+					<ul>
+						<li class="">
+							<span class="glyphicon glyphicon-earphone"></span> <a href="tel:+79853199609"> +7 985 31-99-609</a>
+						</li>
+						<li class="">
+							<span class="glyphicon glyphicon-envelope"></span> <a href="maiilto:inbox@android-studio.ru">inbox@android-studio.ru</a>
+						</li>
+					</ul>
+				</p>
 			</div>
 
 			<!-- форма -->
@@ -99,9 +92,9 @@
 
 
 
-				<form id="contact-form" class="rotate-45" action="">
-					<input type="text" name="name" class="form-input" placeholder="имя">
-					<input type="text" name="contact" class="form-input" placeholder="телефон или e-mail"><br>
+				<form id="contact-form" class="rotate-45" method="POST" action="/api/mail/callback">
+					<input type="text" required maxlength="27" minlength="4" name="name" class="form-input" placeholder="имя">
+					<input type="number" required maxlength="16" minlength="5" name="contact" class="form-input" placeholder="телефон"><br>
 					<input type="submit" name="submit-btn" class="btn black-btn" value="ОТПРАВИТЬ">
 				</form>
 
@@ -115,42 +108,10 @@
 		
 	</section>
 
-	<section id="project-slider" class="scew45">
-		<!-- слайдер -->
-			<ul>
-				<li class="project project01">
-					<div class="project-content"></div>
-				</li>
-				<li class="project project02">
-					<div class="project-content"></div>
-				</li>
-				<li class="project project03">
-					<div class="project-content"></div>
-				</li>
-				<li class="project project04">
-					<div class="project-content"></div>
-				</li>
-				<li class="project project05">
-					<div class="project-content"></div>
-				</li>
-			</ul>
-	</section>
-
-<!-- секция четвёртая -->
-
-	<section id="section4" class="scew45-only">
-		<article class="third-content">
-			<h2 class="uppercase lh30">
-				Наша цель - совместить потребности <br> пользователей и задачи бизнеса
-			</h2>
-			<p>
-				ANDROID STUDIO поможет ваiему бизнесу выйти на новый уровень. Мы создаём качественные приложения опираясь на современные тенденции в области разработки. Досконально исследем рынок и предлагаем своим клиентам только проверенные решения. Зазрабатыая приложения мы следим за всеми необходимыми этапами, благодаря которым вы получаете профессиональный продукт.
-			</p>
-		</article>
-	</section>
+	
 
 
-		<section id="price-section" class="scew45-only">
+		<section id="price-section" class="">
 		<article class="f-content">
 
 				<div id="price">
@@ -216,84 +177,7 @@
 	</section>
 
 
-	<!-- Наша команда -->
-	<section id="ourteam" class="scew45-only w-100">
-		
-		<article class="f-content">
-		<h1 id="team-header" class="uppercase">наша команда</h1>
-			<!-- контейнер для слайдера -->
-			<div id="team-slider">
 	
-			<!-- слайдер -->
-				    <div class="slider-class">
-				  		<div>
-				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
-								iogigbo<br>ibibpiob<br> dausfoi
-							</div>
-				    	</div>
-	
-				  		<div>
-				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
-								iogigbo<br>ibibpiob<br> dausfoi
-							</div>
-				    	</div>
-	
-				 		<div>
-				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
-								iogigbo<br>ibibpiob<br> dausfoi
-							</div>
-				    	</div>
-
-				    	<div>
-				  			<div class="slide-content-x"  style="background-color: darkblue; color: white;  border-radius: 50%;">
-								iogigbo<br>ibibpiob<br> dausfoi
-							</div>
-				    	</div>
-
-				    	<div>
-				  			<div  class="slide-content-x" style="background-color: darkblue; color: white;  border-radius: 50%;">
-								iogigbo<br>ibibpiob<br> dausfoi
-							</div>
-				    	</div>
-				  
-					</div>
-				</div>
-
-				<div class="bottom-buttons">
-					<button class="btn big-black-button">ДИЗАЙНЕРЫ</button>
-					<button class="btn big-black-button">РАЗРАБОТЧИКИ</button>
-					<button class="btn big-black-button">ПРОДВИГАЛЬЩИКИ</button>
-				</div>
-		</article>
-		
-	</section>
-
-
-
-
-	<section id="last-section">
-		<article class="a-contacts">
-			<div class="col-xs-6">
-				<ul class="last-menu"> 
-			 			<li class=""><a href="#home">Главная</a></li>
-               			<li><a href="#project-slider">Портфолио</a></li>
-                		<li><a href="#price-section">Цены</a></li>
-                		<li><a href="#ourteam">Наша команда</a></li>
-                		<li><a href="#last-section">Контакты</a></li>
-			 		</ul>
-			</div>
-			<div class="col-xs-6">
-				<a href="" class="navbar-brand"> </a>
-				<div class="last-cont">
-			 	 	<h4 class="no-margin">8(800)111-22-33</h4>
-			 	 	<span>пн-пт: с 10-00 до 19-00</span><br>
-			 	 	<span class="uppercase">info@android-studio.ru</span>
-			 	 </div>
-			</div>
-		</article>
-	</section>
-
-
 	<footer>
 		<!-- здесь мог бы быть наш футер -->
 	</footer>
@@ -334,7 +218,6 @@
     	var width = $(window).width();
     	var height = $(window).height();
     	var coef = Math.round(((width - height) / width)*100); //отношение ширины и высоты окна, нужно для создания скоса в 45гр.
-    	console.log(coef);
 
     //clip-path
 	if ($(window).width() >= '1023'){
@@ -345,12 +228,17 @@
     }
 
     var coef2 = Math.round(((width - height) / width)*80);
-	var points2 = [[100, coef2], [0, 100], [100, 100]];
+	var points2 = [[100, 0], [0, 100], [100, 100]];
         $('#last-section').clipPath(points2, {
           isPercentage: true
         });
 
 
+   /* var coef3 = Math.round(((width - height) / width)*100);
+	var points3 = [[0,0],[coef3, 0], [100, 100], [0, 100]];
+        $('#price-section').clipPath(points3, {
+          isPercentage: true
+        });*/
     //horizontal parallax
 
 
